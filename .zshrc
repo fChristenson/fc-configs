@@ -89,8 +89,6 @@ source $ZSH/oh-my-zsh.sh
 alias c=clear
 alias d="cd ../"
 
-export LINKEDIN_USERNAME=fredrik.christenson@gmail.com
-export LINKEDIN_PASSWORD='Fidde1987!"#'
 export GOPATH=$HOME/Documents/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$GOPATH/bin:$PATH
