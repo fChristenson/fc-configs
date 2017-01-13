@@ -1,0 +1,143 @@
+{
+    "Logging": {
+        "prefix": ",L",
+        "body": [
+            "var L = require('fc-tools/logging');"
+        ],
+        "description": "fc-tools Logging"
+    },
+    "LlabelInspect": {
+        "prefix": ",label",
+        "body": [
+            ".map(L.labelInspect('$1'))"
+        ],
+        "description": "fc-tools Label inspect map"
+    },
+    "Require": {
+        "prefix": ",require",
+        "body": [
+            "var $1 = require('$2');"
+        ],
+        "description": "CommonJS require"
+    },
+    "include": {
+        "prefix": ",include",
+        "body": [
+            "expect($1).to.include($2);"
+        ],
+        "description": "Chai include"
+    },
+    "Named function": {
+        "prefix": ",nfn",
+        "body": [
+            "function $1($2) {",
+            "  $3",
+            "}"
+        ],
+        "description": "Named function"
+    },
+    "Anonymous function": {
+        "prefix": ",fn",
+        "body": [
+            "function($1) {",
+            "  $2",
+            "}"
+        ],
+        "description": "Anonymous function"
+    },
+    "Log to console": {
+        "prefix": ",log",
+        "body": [
+            "console.log('$1');"
+        ],
+        "description": "Console.log"
+    },
+    "Module exports": {
+        "prefix": ",me",
+        "body": [
+            "module.exports"
+        ],
+        "description": "module.exports"
+    },
+    "util": {
+        "prefix": ",util",
+        "body": [
+            "var util = require('util');"
+        ],
+        "description": "Node Util"
+    },
+    "fs": {
+        "prefix": ",fs",
+        "body": [
+            "var fs = require('fs');"
+        ],
+        "description": "Node Fs"
+    },
+    "path": {
+        "prefix": ",path",
+        "body": [
+            "var path = require('path');"
+        ],
+        "description": "Node Path"
+    },
+    "inspect": {
+        "prefix": ",inspect",
+        "body": [
+            "console.log(util.inspect($1, false, Infinity));"
+        ],
+        "description": "Node Util Inspect"
+    },
+    "Describe": {
+        "prefix": ",describe",
+        "body": [
+            "describe('$1', function() {",
+            "  $2",
+            "});"
+        ],
+        "description": "Mocha Describe"
+    },
+    "it": {
+        "prefix": ",it",
+        "body": [
+            "it('$1', function() {",
+            "  $2",
+            "});"
+        ],
+        "description": "Mocha it"
+    },
+    "fail": {
+        "prefix": ",fail",
+        "body": [
+            "assert.fail(null, null, '$1');"
+        ],
+        "description": "Chai assert.fail"
+    },
+    "assert": {
+        "prefix": ",assert",
+        "body": [
+            "var assert = require('chai').assert;"
+        ],
+        "description": "Chai assert"
+    },
+    "expect": {
+        "prefix": ",expect",
+        "body": [
+            "var expect = require('chai').expect;"
+        ],
+        "description": "Chai expect"
+    },
+    "equal": {
+        "prefix": ",equal",
+        "body": [
+            "expect($1).to.equal($2);"
+        ],
+        "description": "Chai equal"
+    },
+    "ok": {
+        "prefix": ",ok",
+        "body": [
+            "expect($1).to.be.ok;"
+        ],
+        "description": "Chai ok"
+    }
+}
