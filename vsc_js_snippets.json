@@ -139,5 +139,15 @@
             "expect($1).to.be.ok;"
         ],
         "description": "Chai ok"
+    },
+    "mapInspect": {
+        "prefix": "mapinspect",
+        "body": [
+            ".map(function(e) {",
+            "  console.log(util.inspect(e, false, Infinity));",
+            "  console.log('------------------------------------');",
+            "})"
+        ],
+        "description": "Inspect in map func"
     }
 }
