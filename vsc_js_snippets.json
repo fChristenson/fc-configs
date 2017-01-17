@@ -146,6 +146,7 @@
             ".map(function(e) {",
             "  console.log(util.inspect(e, false, Infinity));",
             "  console.log('------------------------------------');",
+            "return e;",
             "})"
         ],
         "description": "Inspect in map func"
