@@ -96,6 +96,11 @@
         ],
         "description": "Mocha Describe"
     },
+    "import": {
+        "prefix": ",import",
+        "body": "import $1 from '$2';",
+        "description": "ES6 import"
+    },
     "it": {
         "prefix": ",it",
         "body": [
