@@ -83,7 +83,8 @@
     "inspect": {
         "prefix": ",inspect",
         "body": [
-            "console.log(util.inspect($1, false, Infinity));"
+            "console.log(util.inspect($1, false, Infinity));",
+            "console.log('-----------------------------------------');"
         ],
         "description": "Node Util Inspect"
     },
