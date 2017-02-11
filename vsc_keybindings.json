@@ -1,4 +1,4 @@
 [
   { "key": "cmd+0", "command": "workbench.action.terminal.focus" },
-  { "key": "cmd+z", "command": "workbench.action.zoomIn" },
+  { "key": "cmd+shift+0", "command": "workbench.action.zoomIn" },
 ]
