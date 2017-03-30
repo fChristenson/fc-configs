@@ -112,7 +112,8 @@
     "equal": {
         "prefix": "qequal",
         "body": [
-            "expect($1).to.equal($2);"
+            "const expected = $1;",
+            "expect($2).to.equal(expected);"
         ],
         "description": "Chai equal"
     },
