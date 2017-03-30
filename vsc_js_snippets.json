@@ -2,7 +2,7 @@
     "Require": {
         "prefix": "qrequire",
         "body": [
-            "var $1 = require('$2');"
+            "const $1 = require('$2');"
         ],
         "description": "CommonJS require"
     },
@@ -16,25 +16,23 @@
     "Named function": {
         "prefix": "qnfn",
         "body": [
-            "function $1($2) {",
+            "const $1 = ($2) => {",
             "  $3",
-            "}"
+            "};"
         ],
         "description": "Named function"
     },
     "Anonymous function": {
         "prefix": "qfn",
         "body": [
-            "function($1) {",
-            "  $2",
-            "}"
+            "($1) => $2"
         ],
         "description": "Anonymous function"
     },
     "Log to console": {
         "prefix": "qlog",
         "body": [
-            "console.log('$1');",
+            "console.log($1);",
             "console.log('--------------------------');"
         ],
         "description": "Console.log"
@@ -49,36 +47,28 @@
     "util": {
         "prefix": "qutil",
         "body": [
-            "var util = require('util');"
+            "const util = require('util');"
         ],
         "description": "Node Util"
     },
     "fs": {
         "prefix": "qfs",
         "body": [
-            "var fs = require('fs');"
+            "const fs = require('fs');"
         ],
         "description": "Node Fs"
     },
     "path": {
         "prefix": "qpath",
         "body": [
-            "var path = require('path');"
+            "const path = require('path');"
         ],
         "description": "Node Path"
-    },
-    "inspect": {
-        "prefix": "qinspect",
-        "body": [
-            "console.log(util.inspect($1, false, Infinity));",
-            "console.log('-----------------------------------------');"
-        ],
-        "description": "Node Util Inspect"
     },
     "Describe": {
         "prefix": "qdescribe",
         "body": [
-            "describe('$1', function() {",
+            "describe('$1', () => {",
             "  $2",
             "});"
         ],
@@ -92,7 +82,7 @@
     "it": {
         "prefix": "qit",
         "body": [
-            "it('$1', function() {",
+            "it('$1', () => {",
             "  $2",
             "});"
         ],
@@ -101,21 +91,21 @@
     "fail": {
         "prefix": "qfail",
         "body": [
-            "assert.fail(null, null, '$1');"
+            "throw new Error('Test not made');"
         ],
-        "description": "Chai assert.fail"
-    },
-    "assert": {
-        "prefix": "qassert",
-        "body": [
-            "var assert = require('chai').assert;"
-        ],
-        "description": "Chai assert"
+        "description": "Fail unit test"
     },
     "expect": {
         "prefix": "qexpect",
         "body": [
-            "var expect = require('chai').expect;"
+            "const expect = require('chai').expect;"
+        ],
+        "description": "Chai expect"
+    },
+    "sinon": {
+        "prefix": "qsinon",
+        "body": [
+            "const sinon = require('sinon');"
         ],
         "description": "Chai expect"
     },
@@ -129,7 +119,7 @@
     "after": {
         "prefix": "qafter",
         "body": [
-            "after(function () {",
+            "after(() => {",
             "  $1",
             "});"
         ],
@@ -138,7 +128,7 @@
     "before": {
         "prefix": "qbefore",
         "body": [
-            "before(function () {",
+            "before(() => {",
             "  $1",
             "});"
         ],
@@ -147,7 +137,7 @@
     "before_each": {
         "prefix": "qbeforeeach",
         "body": [
-            "beforeEach(function () {",
+            "beforeEach(() => {",
             "  $1",
             "});"
         ],
@@ -159,16 +149,5 @@
             "expect($1).to.be.ok;"
         ],
         "description": "Chai ok"
-    },
-    "mapInspect": {
-        "prefix": "qmapinspect",
-        "body": [
-            ".map(function(e) {",
-            "  console.log(util.inspect(e, false, Infinity));",
-            "  console.log('------------------------------------');",
-            "return e;",
-            "})"
-        ],
-        "description": "Inspect in map func"
     }
 }
