@@ -1,4 +1,46 @@
 {
+    "React.PropTypes": {
+        "prefix": "qproptypes",
+        "body": "React.PropTypes.$1"
+    },
+    "React": {
+        "prefix": "qreact",
+        "body": "import React from 'react'"
+    },
+    "React pure function": {
+        "prefix": "qreactpure",
+        "body": [
+            "import React from 'react';",
+            "",
+            "const $1 = ({ $2 }) => {",
+            "  return <div>Hello World!</div>;",
+            "};",
+            "",
+            "$1.propTypes = {",
+            "  $3",
+            "};",
+            "",
+            "export default $1;",
+            ""
+        ]
+    },
+    "React component": {
+        "prefix": "qreactcomponent",
+        "body": [
+            "import React from 'react';",
+            "",
+            "export default class $1 extends React.Component {",
+            "  static propTypes = {",
+            "    $2",
+            "  };",
+            "",
+            "  render () {",
+            "    return <div>Hello World!</div>",
+            "  }",
+            "}",
+            ""
+        ]
+    },
     "Require": {
         "prefix": "qrequire",
         "body": [
@@ -43,6 +85,13 @@
             "module.exports"
         ],
         "description": "module.exports"
+    },
+    "Export default": {
+        "prefix": "qed",
+        "body": [
+            "export default"
+        ],
+        "description": "export default"
     },
     "util": {
         "prefix": "qutil",
@@ -98,7 +147,7 @@
     "expect": {
         "prefix": "qexpect",
         "body": [
-            "const expect = require('chai').expect;"
+            "import { expect } from 'chai'"
         ],
         "description": "Chai expect"
     },
