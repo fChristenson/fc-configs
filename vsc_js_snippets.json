@@ -7,6 +7,30 @@
         "prefix": "qreact",
         "body": "import React from 'react'"
     },
+    "React component unit test template": {
+        "prefix": "qreacttest",
+        "body": [
+            "import React from 'react';",
+            "import { shallow } from 'enzyme';",
+            "import { expect } from 'chai';",
+            "import $1 from '../';",
+            "",
+            "describe.only('$1 test', () => {",
+            "  it('has a module', () => {",
+            "    expect($1).to.be.ok;",
+            "  });",
+            "",
+            "  it('renders', () => {",
+            "    const props = {",
+            "      $2",
+            "    };",
+            "    const comp = shallow(<div><$1 {...props} /></div>);",
+            "    expect(comp.find($1).length).to.equal(1);",
+            "  });",
+            "});",
+            ""
+        ]
+    },
     "React pure function": {
         "prefix": "qreactpure",
         "body": [
