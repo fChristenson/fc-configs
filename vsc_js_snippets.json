@@ -1,83 +1,10 @@
 {
-    "React.PropTypes": {
-        "prefix": "qproptypes",
-        "body": "React.PropTypes.$1"
-    },
-    "React": {
-        "prefix": "qreact",
-        "body": "import React from 'react'"
-    },
-    "React component unit test template": {
-        "prefix": "qreacttest",
-        "body": [
-            "import React from 'react';",
-            "import { shallow } from 'enzyme';",
-            "import { expect } from 'chai';",
-            "import $1 from '../';",
-            "",
-            "describe.only('$1 test', () => {",
-            "  it('has a module', () => {",
-            "    expect($1).to.be.ok;",
-            "  });",
-            "",
-            "  it('renders', () => {",
-            "    const props = {",
-            "      $2",
-            "    };",
-            "    const comp = shallow(<div><$1 {...props} /></div>);",
-            "    expect(comp.find('$1').length).to.equal(1);",
-            "  });",
-            "});",
-            ""
-        ]
-    },
-    "React pure function": {
-        "prefix": "qreactpure",
-        "body": [
-            "import React from 'react';",
-            "",
-            "const $1 = ({ $2 }) => {",
-            "  return <div>Hello World!</div>;",
-            "};",
-            "",
-            "$1.propTypes = {",
-            "  $3",
-            "};",
-            "",
-            "export default $1;",
-            ""
-        ]
-    },
-    "React component": {
-        "prefix": "qreactcomponent",
-        "body": [
-            "import React from 'react';",
-            "",
-            "export default class $1 extends React.Component {",
-            "  static propTypes = {",
-            "    $2",
-            "  };",
-            "",
-            "  render () {",
-            "    return <div>Hello World!</div>;",
-            "  }",
-            "};",
-            ""
-        ]
-    },
     "Require": {
         "prefix": "qrequire",
         "body": [
             "const $1 = require('$2');"
         ],
         "description": "CommonJS require"
-    },
-    "include": {
-        "prefix": "qinclude",
-        "body": [
-            "expect($1).to.include($2);"
-        ],
-        "description": "Chai include"
     },
     "Named function": {
         "prefix": "qnfn",
@@ -110,13 +37,6 @@
         ],
         "description": "module.exports"
     },
-    "Export default": {
-        "prefix": "qed",
-        "body": [
-            "export default"
-        ],
-        "description": "export default"
-    },
     "util": {
         "prefix": "qutil",
         "body": [
@@ -145,7 +65,7 @@
             "  $2",
             "});"
         ],
-        "description": "Mocha Describe"
+        "description": "Jest Describe"
     },
     "import": {
         "prefix": "qimport",
@@ -159,54 +79,41 @@
             "  $2",
             "});"
         ],
-        "description": "Mocha it"
+        "description": "Jest it"
     },
     "fail": {
         "prefix": "qfail",
         "body": [
-            "throw new Error('Test not made');"
+            "throw new Error('Fail');"
         ],
         "description": "Fail unit test"
-    },
-    "expect": {
-        "prefix": "qexpect",
-        "body": [
-            "import { expect } from 'chai'"
-        ],
-        "description": "Chai expect"
-    },
-    "sinon": {
-        "prefix": "qsinon",
-        "body": [
-            "const sinon = require('sinon');"
-        ],
-        "description": "Chai expect"
     },
     "equal": {
         "prefix": "qequal",
         "body": [
             "const expected = $1;",
-            "expect($2).to.equal(expected);"
+            "const actual = $2;",
+            "expect(actual).toEqual(expected);"
         ],
         "description": "Chai equal"
     },
     "after": {
         "prefix": "qafter",
         "body": [
-            "after(() => {",
+            "afterAll(() => {",
             "  $1",
             "});"
         ],
-        "description": "Mocha after"
+        "description": "Jest after"
     },
     "before": {
         "prefix": "qbefore",
         "body": [
-            "before(() => {",
+            "beforeAll(() => {",
             "  $1",
             "});"
         ],
-        "description": "Mocha before"
+        "description": "Jest before"
     },
     "before_each": {
         "prefix": "qbeforeeach",
@@ -215,13 +122,22 @@
             "  $1",
             "});"
         ],
-        "description": "Mocha before each"
+        "description": "Jest before each"
+    },
+    "after_each": {
+        "prefix": "qaftereach",
+        "body": [
+            "afterEach(() => {",
+            "  $1",
+            "});"
+        ],
+        "description": "Jest before each"
     },
     "ok": {
-        "prefix": "qok",
+        "prefix": "qdefined",
         "body": [
-            "expect($1).to.be.ok;"
+            "expect($1).toBeDefined();"
         ],
-        "description": "Chai ok"
+        "description": "Jest defined"
     }
 }
