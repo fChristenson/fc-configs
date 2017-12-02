@@ -4,6 +4,16 @@
   "editor.tabSize": 2,
   "editor.fontFamily": "Source Code Pro",
   "git.confirmSync": false,
-  "rust.formatOnSave": true,
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "window.zoomLevel": 0,
+  "vsicons.projectDetection.disableDetect": true,
+  "workbench.colorTheme": "Monokai Dimmed",
+  "workbench.iconTheme": "vscode-icons",
+  "terminal.integrated.fontSize": 12,
+  "editor.formatOnSave": true,
+  "sublimeTextKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnPaste": false,
+  "javascript.format.enable": false
 }
