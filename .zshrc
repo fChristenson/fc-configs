@@ -88,6 +88,12 @@ source $ZSH/oh-my-zsh.sh
 #############################################################################
 alias c=clear
 alias d="cd ../"
+alias g="cd"
+alias h="cd ~/"
+alias bh="cd ~/Documents/baconhammer"
+alias bhc="cd ~/Documents/baconhammer-client"
+alias doc="cd ~/Documents"
+alias dl="cd ~/Downloads"
 
 export GOPATH=$HOME/Documents/go
 export GOROOT=/usr/local/opt/go/libexec
