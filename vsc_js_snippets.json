@@ -93,7 +93,7 @@
         "body": [
             "const expected = $1;",
             "const actual = $2;",
-            "expect(actual).toEqual(expected);"
+            "expect(expected).toEqual(actual);"
         ],
         "description": "Chai equal"
     },
