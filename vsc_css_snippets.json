@@ -1,0 +1,14 @@
+{
+	"reset": {
+		"prefix": "qreset",
+		"body": [
+			"*, *::before, *::after {",
+			"  margin: 0;",
+			"  padding: 0;",
+			"  box-sizing: border-box;",
+			"}",
+			""
+		],
+		"description": "Express static middleware"
+	},
+}
