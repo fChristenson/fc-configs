@@ -208,4 +208,29 @@
         ],
         "description": "Express static middleware"
     },
+    "mongoose": {
+        "prefix": "qmongoose",
+        "body": [
+            "const mongoose = require(\"mongoose\");",
+            "",
+            "mongoose.connect(process.env.MONGO_URI || \"mongodb://0.0.0.0:27017/app\", {",
+            "  useNewUrlParser: true",
+            "});"
+        ],
+        "description": "Mongoose setup"
+    },
+    "mongoose-model": {
+        "prefix": "qmodel",
+        "body": [
+            "const mongoose = require(\"mongoose\");",
+            "const Schema = mongoose.Schema;",
+            "",
+            "const $1Schema = new Schema({",
+            "  createdAt: { type: Date, default: Date.now }",
+            "});",
+            "",
+            "module.exports = mongoose.model(\"$1\", $1Schema);"
+        ],
+        "description": "Mongoose model"
+    }
 }
