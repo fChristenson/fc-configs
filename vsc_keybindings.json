@@ -1,4 +1,23 @@
+// Place your key bindings in this file to overwrite the defaults
 [
-  { "key": "cmd+0", "command": "workbench.action.terminal.focus" },
-  { "key": "cmd+shift+0", "command": "workbench.action.zoomIn" },
+  {
+    "key": "cmd+shift+r",
+    "command": "workbench.action.tasks.runTask"
+  },
+  {
+    "key": "cmd+shift+e",
+    "command": "workbench.action.tasks.restartTask"
+  },
+  {
+    "key": "cmd+0",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "cmd+shift+0",
+    "command": "workbench.action.zoomIn"
+  },
+  {
+    "key": "cmd+shift+t",
+    "command": "workbench.action.tasks.test"
+  }
 ]
