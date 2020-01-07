@@ -99,31 +99,59 @@ alias dl="cd ~/Downloads"
 alias dip="docker rmi -f $(docker images -f dangling=true -q)"
 alias dcp="docker rm -f $(docker ps -aq)"
 
-alias ka="kubectl apply -f"
-alias kd="kubectl delete -f"
-alias kc="kubectl create -f"
+alias kdelf="kubectl delete -f"
+alias kcf="kubectl create -f"
 
-alias klof="kubectl logs -f"
-
+alias kns="kubens"
 alias kpf="kubectl port-forward"
+alias klof="kubectl logs -f"
+alias kex="kubectl exec -it" 
+alias kaf="kubectl apply -f"
 
-alias kex="kubectl exec -it"
-
-alias kgpo="kubectl get pods"
-alias kdelpo="kubectl delete pods"
 alias kdespo="kubectl describe pods"
+alias kdelpo="kubectl delete pod"
+alias kgpo="kubectl get pods"
+alias kepo="kubectl edit pod"
 
-alias kdesserv="kubectl describe services"
-alias kgserv="kubectl get services"
+alias ked="kubectl edit deployment"
+alias kgd="kubectl get deployment"
+alias kdesd="kubectl describe deployment"
 
-alias kgd="kubectl get deployments"
-alias kdeld="kubectl delete deployments"
-alias kdesd="kubectl describe deployments"
+alias kdelcm="kubectl delete configmaps"
+alias kecm="kubectl edit configmaps"
+alias kgcm="kubectl get configmaps"
+alias kdescm="kubectl describe configmap"
 
-alias kgns="kubectl get namespaces"
-alias kdelns="kubectl delete namespaces"
-alias kdesns="kubectl describe namespaces"
-alias kcns="kubectl create namespace"
+alias kcj="kubectl create job"
+alias kgj="kubectl get jobs"
+alias kdelj="kubectl delete job"
+
+alias kgns="kubectl get namespace"
+alias kdelns="kubectl delete namespace"
+alias kdesns="kubectl describe namespace"
+alias kens="kubectl edit namespace"
+
+alias kgcj="kubectl get cronjobs"
+alias kecj="kubectl edit cronjobs"
+alias kdelcj="kubectl delete cronjobs"
+
+alias kgsec="kubectl get secrets"
+alias kdelsec="kubectl delete secrets"
+alias kdessec="kubectl describe secret"
+
+alias kgser="kubectl get services"
+alias kdelser="kubectl delete service"
+alias kdesser="kubectl describe service"
+alias keser="kubectl edit service"
+
+alias kgr="kubectl get replicasets"
+alias kdelr="kubectl delete replicaset"
+alias kdesr="kubectl describe replicaset"
+
+alias kgnp="kubectl get networkpolicies"
+alias kdelnp="kubectl delete networkpolicies"
+alias kdesnp="kubectl describe networkpolicies"
+alias kenp="kubectl edit networkpolicies"
 
 export PATH=$PATH:/Users/fredrik/.cargo/bin
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
